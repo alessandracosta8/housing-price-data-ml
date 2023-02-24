@@ -51,21 +51,90 @@ Although your friend has an excellent understanding of property prices in her ow
 
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
-* List your business requirements and a rationale to map them to the Data Visualisations and ML tasks.
+* Business Requirement 1: Data Visualization and Correlation study
+    * I will inspect the data related to the houses in the area of Ames, Iowa.
+    * I will conduct a correlation study (Pearson and Spearman) to understand better how the variables are correlated to the house prices.
+    * I will plot the variables against the house price to visualise insights.
+
+* Business Requirement 2: Classification, Regression, Cluster and Data Analysis
+    * I want to deliver an ML system that is capable of reliably predicting the summed sales price of the 4 inherited houses.
+    * Use conventional ML to map the relationships between the features and the target.
+    * I may consider changing the ML task from Regression to Classification if you find a valid rationale for that.
+    * I may conduct extensive hyperparameter optimization for a given algorithm.
 
 
 ## ML Business Case
-* In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.
+* Business requirements:
+    - The client is interested in discovering how house attributes correlate with sale prices. Therefore, the client expects data visualizations of the correlated variables against the sale price.
+    - The client is interested in predicting the house sale prices from her 4 inherited houses, and any other house in Ames, Iowa.
+
+* Business requirement that can be answered with conventional data analysis:
+    - I can use conventional data analysis to investigate how house attributes are correlated with the sale prices.
+
+* Client need:
+    - The client needs a dashboard.
+
+* Successful project outcome for the customer will be:
+    - A study showing the most relevant variables correlated to sale price.
+    - The capability to predict the sale price for the 4 inherited houses, as well as any other house in Ames, Iowa.
+
+* Epics and User Stories:
+    - Information gathering and data collection.
+    - Data visualization, cleaning, and preparation.
+    - Model training, optimization and validation.
+    - Dashboard planning, designing, and development.
+    - Dashboard deployment and release.
+
+* Ethical or Privacy concerns:
+    - There are no Ethical or Privacy concerns. The client found a public dataset.
+
+* Particular model suggested by the data:
+    - The data suggests a regressor where the target is the sale price.
+
+* Model's inputs and intended outputs:
+     - The inputs are house attribute information and the output is the predicted sale price.
+
+* Criteria for the performance goal of the predictions:
+    - Agreed with the client an R2 score of at least 0.75 on the train set as well as on the test set.
+    - The ML model is considered a failure if after 12 months of usage, the model's predictions are 50% off more than 30% of the time about the offer sale price offer to the customer from potential buyers.
+
+* Benefit for the client:
+    - The client will maximize the sales price for the inherited properties.
+
 
 
 ## Dashboard Design
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items that your dashboard library supports.
-* Eventually, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but eventually you needed to use another plot type)
 
+### Page 1: Quick project summary
+* Quick project summary
+	* Describe Project Dataset
+	* State Business Requirements
+
+### Page 2: House prices Study of the Ames, Iowa area
+* I will list findings related to which features have the strongest correlation to the house sale price.
+* Before the analysis, we knew we wanted this page to answer business requirement 1, but we couldn't know in advance which plots would need to be displayed.
+* After data analysis, we agreed with stakeholders that the page will: 
+	* State business requirement 1
+
+### Page 3: House prices predictor
+* State business requirement 2
+* Display the 4 houses' attributes and their respective predicted sale price.
+* Display a message informing the summed predicted price for all 4 inherited houses.
+* Set of interactive widgets inputs that allow a user to provide real-time house data to predict the sale price. Each set of inputs is related to a given ML task to predict the house sales price.
+
+### Page 4: Hypothesises
+* Project hypothesises and how they were validated across the project.
+
+### Page 5: Predict Price
+* Considerations and conclusions after the pipeline is trained
+* Present ML pipeline steps
+* Feature importance
+* Pipeline performance
 
 
 ## Unfixed Bugs
-* You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not valid reason to leave bugs unfixed.
+* None reported at the momement.
+<!--- You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not valid reason to leave bugs unfixed. --->
 
 ## Deployment
 ### Heroku
@@ -80,6 +149,9 @@ Although your friend has an excellent understanding of property prices in her ow
 4. Select the branch you want to deploy, then click Deploy Branch.
 5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
 6. If the slug size is too large then add large files not required for the app to the .slugignore file.
+
+## Link to deployed app
+[Churnometer live app](https://churnometer-ml-project.herokuapp.com/)
 
 ## Main Data Analysis and Machine Learning Libraries
 * Here you should list the libraries you used in the project and provide example(s) of how you used these libraries.
