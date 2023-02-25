@@ -1,4 +1,4 @@
-## Dataset Content
+# Dataset Content
 * The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/housing-prices-data). We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace. 
 * The dataset has almost 1.5 thousand rows and represents housing records from Ames, Iowa, indicating house profile (Floor Area, Basement, Garage, Kitchen, Lot, Porch, Wood Deck, Year Built) and its respective sale price for houses built between 1872 and 2010.
 
@@ -28,29 +28,31 @@
 |YearBuilt|Original construction date|1872 - 2010|
 |YearRemodAdd|Remodel date (same as construction date if no remodelling or additions)|1950 - 2010|
 |SalePrice|Sale Price|34900 - 755000|
+---
+&nbsp;
 
 
-
-
-
-## Business Requirements
+# Business Requirements
 As a good friend, you are requested by your friend, who has received an inheritance from a deceased great-grandfather located in Ames, Iowa, to  help in maximising the sales price for the inherited properties.
 
 Although your friend has an excellent understanding of property prices in her own state and residential area, she fears that basing her estimates for property worth on her current knowledge might lead to inaccurate appraisals. What makes a house desirable and valuable where she comes from might not be the same in Ames, Iowa. She found a public dataset with house prices for Ames, Iowa, and will provide you with that.
 
 * 1 - The client is interested in discovering how the house attributes correlate with the sale price. Therefore, the client expects data visualisations of the correlated variables against the sale price to show that.
 * 2 - The client is interested in predicting the house sale price from her four inherited houses and any other house in Ames, Iowa.
+---
+&nbsp;
 
 
-## Hypothesis and how to validate?
+# Hypothesis and how to validate?
 * 1 - I suspect the Overall condition of the house and overall material and finish of the house will impact the sale price significantly.
     * A Correlation study can help in this investigation.
 * 2 - I suspect the remodel date of the house will be significant in positively impact the price of sale of the house.
     * A Correlation study can help in this investigation.
+---
+&nbsp;
 
 
-
-## The rationale to map the business requirements to the Data Visualisations and ML tasks
+# The rationale to map the business requirements to the Data Visualisations and ML tasks
 * Business Requirement 1: Data Visualization and Correlation study
     * I will inspect the data related to the houses in the area of Ames, Iowa.
     * I will conduct a correlation study (Pearson and Spearman) to understand better how the variables are correlated to the house prices.
@@ -61,9 +63,11 @@ Although your friend has an excellent understanding of property prices in her ow
     * Use conventional ML to map the relationships between the features and the target.
     * I may consider changing the ML task from Regression to Classification if you find a valid rationale for that.
     * I may conduct extensive hyperparameter optimization for a given algorithm.
+---
+&nbsp;
 
 
-## ML Business Case
+# ML Business Case
 * Business requirements:
     - The client is interested in discovering how house attributes correlate with sale prices. Therefore, the client expects data visualizations of the correlated variables against the sale price.
     - The client is interested in predicting the house sale prices from her 4 inherited houses, and any other house in Ames, Iowa.
@@ -100,44 +104,78 @@ Although your friend has an excellent understanding of property prices in her ow
 
 * Benefit for the client:
     - The client will maximize the sales price for the inherited properties.
+---
+&nbsp;
 
 
+# Data Preparation
+Significant amount of data were missing in multiple variables. A further investigation should be held with who collected the data to explore if these variables are actual missing data or refer to the fact that the feature described is actually non present or non relevant. Since this is not possible, further analysis has been performed to individuate if there is any sensible correlation with the missing data values and the others. As an example missing data around the square feet of a second floor might be caused by the fact that the house in question might not have a second floor at all.
+&nbsp;
 
-## Dashboard Design
+The analysis proceeded as described in the Data Cleaning section.
 
-### Page 1: Quick project summary
+## Data Cleaning
+The variables with missing data are:<br>
+    - 2ndFlrSF: 5.9%<br>
+    - BedroomAbvGr: 6.8%<br>
+    - BsmtFinType1: 7.8%<br>
+    - EnclosedPorch: 90.7%<br>
+    - GarageFinish: 11.1%<br>
+    - GarageYrBlt: 5.5%<br>
+    - LotFrontage: 17.7%<br>
+    - WoodDeckSF: 89.4%<br>
+    - MasVnrArea: 0.55%<br>
+
+&nbsp;
+
+## Feature Engineering
+---
+&nbsp;
+
+
+# Dashboard Design
+&nbsp;
+
+## Page 1: Quick project summary
 * Quick project summary
 	* Describe Project Dataset
 	* State Business Requirements
 
-### Page 2: House prices Study of the Ames, Iowa area
+## Page 2: House prices Study of the Ames, Iowa area
 * I will list findings related to which features have the strongest correlation to the house sale price.
 * Before the analysis, we knew we wanted this page to answer business requirement 1, but we couldn't know in advance which plots would need to be displayed.
 * After data analysis, we agreed with stakeholders that the page will: 
 	* State business requirement 1
 
-### Page 3: House prices predictor
+## Page 3: House prices predictor
 * State business requirement 2
 * Display the 4 houses' attributes and their respective predicted sale price.
 * Display a message informing the summed predicted price for all 4 inherited houses.
 * Set of interactive widgets inputs that allow a user to provide real-time house data to predict the sale price. Each set of inputs is related to a given ML task to predict the house sales price.
 
-### Page 4: Hypothesises
+## Page 4: Hypothesises
 * Project hypothesises and how they were validated across the project.
 
-### Page 5: Predict Price
+## Page 5: Predict Price
 * Considerations and conclusions after the pipeline is trained
 * Present ML pipeline steps
 * Feature importance
 * Pipeline performance
+---
+&nbsp;
 
 
-## Unfixed Bugs
+# Unfixed Bugs
 * None reported at the momement.
 <!--- You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not valid reason to leave bugs unfixed. --->
+---
+&nbsp;
 
-## Deployment
-### Heroku
+
+# Deployment
+&nbsp;
+
+## Heroku
 
 * The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
 * Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
@@ -152,29 +190,44 @@ Although your friend has an excellent understanding of property prices in her ow
 
 ## Link to deployed app
 [Churnometer live app](https://churnometer-ml-project.herokuapp.com/)
+---
+&nbsp;
 
-## Main Data Analysis and Machine Learning Libraries
+
+# Main Data Analysis and Machine Learning Libraries
 * Here you should list the libraries you used in the project and provide example(s) of how you used these libraries.
+---
+&nbsp;
 
 
-## Credits 
+# Credits 
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
+<!--- * In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
+* You can break the credits section up into Content and Media, depending on what you have included in your project. --->
 
-### Content 
+&nbsp;
 
+
+## Content
+### Documentation Used:
+[ArbitraryNumberImputer in Feature Engine documentation](https://feature-engine.trainindata.com/en/1.0.x/imputation/ArbitraryNumberImputer.html?highlight=ArbitraryNumberImputer)
+
+[CategoricalImputer in Feature Engine documentation](https://feature-engine.trainindata.com/en/1.0.x/imputation/CategoricalImputer.html)
+
+[MeanMedianImputer in Feature Engine documentation](https://feature-engine.trainindata.com/en/1.0.x/imputation/MeanMedianImputer.html?highlight=MeanMedianImputer)
+
+<!---
 - The text for the Home page was taken from Wikipedia Article A
 - Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
 - The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+--->
 
-### Media
+## Media
 
 - The photos used on the home and sign-up page are from This Open Source site
 - The images used for the gallery page were taken from this other open-source site
+---
+&nbsp;
 
-
-
-## Acknowledgements (optional)
+# Acknowledgements
 * In case you would like to thank the people that provided support through this project.
-
