@@ -126,6 +126,13 @@ The variables with missing data are:<br>
     - WoodDeckSF: 89.4%<br>
     - MasVnrArea: 0.55%<br>
 
+The variables 'BedroomAbvGr', 'GarageYrBlt', 'LotFrontage' and 'MasVnrArea' are not normally distributed as shown in the plots. So I decided to replace the missing values with the median instead of the mean.
+
+I decided to handle the features '2ndFlrSF', 'EnclosedPorch' and 'WoodDeckSF' assuming that a missing value would indicate that the feature was 0. I assumed that all three of these features would have 0 square feet indicated because the house had respectively no second floor, nor enclosed porch, nor wood deck. This was to identify in further analysis and data during the house price study if they had any correlation with the target variable, instead of dropping them altogether already at this stage.
+For this reason I've used the ArbitraryNumberImputer to replace the missing values with 0.
+
+I decided the features 'BsmtFinType1' and 'GarageFinish' will be transformed using the CategoricalImputer and replacing the missing values with the most frequent found in the rest of the data for that specific feature.
+
 &nbsp;
 
 ## Feature Engineering
@@ -210,11 +217,10 @@ The variables with missing data are:<br>
 
 ## Content
 ### Documentation Used:
-[ArbitraryNumberImputer in Feature Engine documentation](https://feature-engine.trainindata.com/en/1.0.x/imputation/ArbitraryNumberImputer.html?highlight=ArbitraryNumberImputer)
 
-[CategoricalImputer in Feature Engine documentation](https://feature-engine.trainindata.com/en/1.0.x/imputation/CategoricalImputer.html)
-
-[MeanMedianImputer in Feature Engine documentation](https://feature-engine.trainindata.com/en/1.0.x/imputation/MeanMedianImputer.html?highlight=MeanMedianImputer)
+- [ArbitraryNumberImputer in Feature Engine documentation](https://feature-engine.trainindata.com/en/1.0.x/imputation/ArbitraryNumberImputer.html?highlight=ArbitraryNumberImputer)
+- [CategoricalImputer in Feature Engine documentation](https://feature-engine.trainindata.com/en/1.0.x/imputation/CategoricalImputer.html)
+- [MeanMedianImputer in Feature Engine documentation](https://feature-engine.trainindata.com/en/1.0.x/imputation/MeanMedianImputer.html?highlight=MeanMedianImputer)
 
 <!---
 - The text for the Home page was taken from Wikipedia Article A
