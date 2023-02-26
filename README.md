@@ -211,7 +211,7 @@ I decided the features 'BsmtFinType1' and 'GarageFinish' will be transformed usi
 
 <!--- * In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
 * You can break the credits section up into Content and Media, depending on what you have included in your project. --->
-
+The Churnometer walkthrough project - Code Institute learning materials: the majority of the code used was taken from the course material and adapted by me to fit the current project needs.
 &nbsp;
 
 
