@@ -136,6 +136,8 @@ I decided the features 'BsmtFinType1' and 'GarageFinish' will be transformed usi
 &nbsp;
 
 ## Feature Engineering
+
+
 ---
 &nbsp;
 
