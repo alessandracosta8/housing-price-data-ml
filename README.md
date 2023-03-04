@@ -224,6 +224,7 @@ The Churnometer walkthrough project - Code Institute learning materials: the maj
 - [CategoricalImputer in Feature Engine documentation](https://feature-engine.trainindata.com/en/1.0.x/imputation/CategoricalImputer.html)
 - [MeanMedianImputer in Feature Engine documentation](https://feature-engine.trainindata.com/en/1.0.x/imputation/MeanMedianImputer.html?highlight=MeanMedianImputer)
 - [Markdown guide](https://www.markdownguide.org/)
+- [Hyperparameter Optimization tutorial - Youtube](https://www.youtube.com/watch?v=eZ98q7iOUAA)
 
 <!---
 - The text for the Home page was taken from Wikipedia Article A
