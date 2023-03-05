@@ -137,6 +137,25 @@ I decided the features 'BsmtFinType1' and 'GarageFinish' will be transformed usi
 
 ## Feature Engineering
 
+### 1. Categorical Encoding 
+Categorical Encoding of object type features to be converted to numerical to suit the regression algorithms.
+&nbsp;
+
+### 2. Numerical Transofrmations:
+| Feature      | Review | Transformation chosen |
+| ----------- | ----------- | ----------- |
+| 1stFlrSF      | A few transformation improved the distribution, especially log_e | Logarithmic in base e |
+| GarageArea   | Yeo Johnson looks like the most effective  | Yeo Johnson |
+| GarageYrBlt   | None of the transformations seems to be effective to normalise  | None |
+| GrLivArea   | Yeo Johnson looks like the most effective  | Yeo Johnson |
+| OverallQual   | None of the transformations seems to be effective to normalise  | None |
+| TotalBsmtSF   | Power looks like the most effective once the ouliers are removed  | Power |
+| YearBuilt   | None of the transformations seems to be effective to normalise  | None |
+| YearRemodAdd   | None of the transformations seems to be effective to normalise  | None |
+&nbsp;
+
+### 3. Smart Correlated Selection:
+The result is indicating that all features are highly correlated. For obvious reason we are not going to drop all the variables in the data set, I will move to the phase of modelling and evaluate the performance there empirically until the performance is accettable. If not I will return to this stage for further feature engineering.
 
 ---
 &nbsp;
