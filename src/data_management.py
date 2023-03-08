@@ -12,3 +12,9 @@ def load_ames_data():
 
 def load_pkl_file(file_path):
     return joblib.load(filename=file_path)
+
+
+@st.cache(suppress_st_warning=True, allow_output_mutation=True)
+def load_inherited_houses_data():
+    df = pd.read_csv("outputs/datasets/collection/inherited_houses.csv")
+    return df
