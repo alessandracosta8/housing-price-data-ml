@@ -173,7 +173,8 @@ The result is indicating that all features are highly correlated. For obvious re
 * I will list findings related to which features have the strongest correlation to the house sale price.
 * Before the analysis, we knew we wanted this page to answer business requirement 1, but we couldn't know in advance which plots would need to be displayed.
 * After data analysis, we agreed with stakeholders that the page will: 
-	* State business requirement 1
+	* Have a sample of the data frame containing the data
+    * Have visual scatter plots of each variable with high correlation to the sale price to be able to visually analyze the data.
 
 ## Page 3: House prices predictor
 * State business requirement 2
