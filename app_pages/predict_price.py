@@ -29,9 +29,9 @@ def predict_house_prices_body():
         f"house in the area of Ames, Iowa as long as the user is in possessions of the data "
         f"reguarding the 3 features need for the model to predict. \n"
         f"These being: \n "
-        f"* OverallQual - Rates the overall material and finish of the house \n "
-        f"* GrLivArea - Above grade (ground) living area square feet \n "
-        f"* TotalBsmtSF - Total square feet of basement area"
+        f"* 'OverallQual' - Rates the overall material and finish of the house \n "
+        f"* 'GrLivArea' - Above grade (ground) living area square feet \n "
+        f"* 'TotalBsmtSF' - Total square feet of basement area"
     )
 
     st.write("---")
@@ -76,7 +76,7 @@ def predict_house_prices_body():
     # predict on live data
     if st.button('Predict House Sale Price'):
         price_prediction = predict_price(
-            X_live, house_features, pipeline_model
+            X_live, price_features, price_pipeline
         )
 
         st.write(
