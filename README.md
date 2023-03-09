@@ -203,7 +203,7 @@ The result indicates that all features are highly correlated. For obvious reason
 # Deployment
 
 ## Heroku
-* The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
+* The App live link is: https://housing-price-data-ml.herokuapp.com/ 
 * Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
 * The project was deployed to Heroku using the following steps.
 
@@ -214,7 +214,7 @@ The result indicates that all features are highly correlated. For obvious reason
 5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
 6. If the slug size is too large then add large files not required for the app to the .slugignore file.
 
-### Link to deployed app
+## [Link to deployed app](https://housing-price-data-ml.herokuapp.com/)
 ---
 &nbsp;
 
@@ -244,11 +244,3 @@ The Churnometer walkthrough project - Code Institute learning materials: the maj
 - [Markdown guide](https://www.markdownguide.org/)
 - [Hyperparameter Optimization tutorial - Youtube](https://www.youtube.com/watch?v=eZ98q7iOUAA)
 - [How to use st.write and magic commands](https://www.youtube.com/watch?v=wpDuY9I2fDg)
-
-
-## Media
-
----
-&nbsp;
-
-# Acknowledgements
