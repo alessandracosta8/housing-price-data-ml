@@ -2,7 +2,6 @@
 * The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/housing-prices-data). We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace. 
 * The dataset has almost 1.5 thousand rows and represents housing records from Ames, Iowa, indicating house profile (Floor Area, Basement, Garage, Kitchen, Lot, Porch, Wood Deck, Year Built) and its respective sale price for houses built between 1872 and 2010.
 
-[Link to deployed app](https://housing-price-data-ml.herokuapp.com/)
 
 |Variable|Meaning|Units|
 |:----|:----|:----|
@@ -33,6 +32,7 @@
 ---
 &nbsp;
 
+[Link to deployed app](https://housing-price-data-ml.herokuapp.com/)
 
 # Business Requirements
 As a good friend, you are requested by your friend, who has received an inheritance from a deceased great-grandfather located in Ames, Iowa, to  help in maximising the sales price for the inherited properties.
