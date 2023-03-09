@@ -129,9 +129,9 @@ The variables with missing data are:<br>
 The variables 'BedroomAbvGr', 'GarageYrBlt', 'LotFrontage' and 'MasVnrArea' are not normally distributed as shown in the plots. So I decided to replace the missing values with the median instead of the mean.
 
 I decided to handle the features '2ndFlrSF', 'EnclosedPorch' and 'WoodDeckSF' assuming that a missing value would indicate that the feature was 0. I assumed that all three of these features would have 0 square feet indicated because the house had respectively no second floor, nor enclosed porch, nor wood deck. This was to identify in further analysis and data during the house price study if they had any correlation with the target variable, instead of dropping them altogether already at this stage.
-For this reason I've used the ArbitraryNumberImputer to replace the missing values with 0.
+For this reason, I've used the ArbitraryNumberImputer to replace the missing values with 0.
 
-I decided the features 'BsmtFinType1' and 'GarageFinish' will be transformed using the CategoricalImputer and replacing the missing values with the most frequent found in the rest of the data for that specific feature.
+I decided the features 'BsmtFinType1' and 'GarageFinish' will be transformed using the CategoricalImputer and replacing the missing values with the most frequently found in the rest of the data for that specific feature.
 
 &nbsp;
 
@@ -141,7 +141,7 @@ I decided the features 'BsmtFinType1' and 'GarageFinish' will be transformed usi
 Categorical Encoding of object type features to be converted to numerical to suit the regression algorithms.
 &nbsp;
 
-### 2. Numerical Transofrmations:
+### 2. Numerical Transformations:
 | Feature      | Review | Transformation chosen |
 | ----------- | ----------- | ----------- |
 | 1stFlrSF      | A few transformation improved the distribution, especially log_e | Logarithmic in base e |
@@ -155,7 +155,7 @@ Categorical Encoding of object type features to be converted to numerical to sui
 &nbsp;
 
 ### 3. Smart Correlated Selection:
-The result is indicating that all features are highly correlated. For obvious reason we are not going to drop all the variables in the data set, I will move to the phase of modelling and evaluate the performance there empirically until the performance is accettable. If not I will return to this stage for further feature engineering.
+The result indicates that all features are highly correlated. For obvious reasons we are not going to drop all the variables in the data set, I will move to the modelling phase and evaluate the performance there empirically until the performance is acceptable. If not I will return to this stage for further feature engineering.
 
 ---
 &nbsp;
@@ -174,7 +174,7 @@ The result is indicating that all features are highly correlated. For obvious re
 * Before the analysis, we knew we wanted this page to answer business requirement 1, but we couldn't know in advance which plots would need to be displayed.
 * After data analysis, we agreed with stakeholders that the page will: 
 	* Have a sample of the data frame containing the data
-    * Have visual scatter plots of each variable with high correlation to the sale price to be able to visually analyze the data.
+    * Have visual scatter plots of each variable with a high correlation to the sale price to be able to visually analyze the data.
 
 ## Page 3: House prices predictor
 * State business requirement 2
@@ -196,16 +196,13 @@ The result is indicating that all features are highly correlated. For obvious re
 
 # Unfixed Bugs
 * None reported at the momement.
-<!--- You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not valid reason to leave bugs unfixed. --->
 ---
 &nbsp;
 
 
 # Deployment
-&nbsp;
 
 ## Heroku
-
 * The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
 * Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
 * The project was deployed to Heroku using the following steps.
@@ -217,29 +214,30 @@ The result is indicating that all features are highly correlated. For obvious re
 5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
 6. If the slug size is too large then add large files not required for the app to the .slugignore file.
 
-## Link to deployed app
-[Churnometer live app](https://churnometer-ml-project.herokuapp.com/)
+### Link to deployed app
 ---
 &nbsp;
 
 
 # Main Data Analysis and Machine Learning Libraries
-* Here you should list the libraries you used in the project and provide example(s) of how you used these libraries.
+* [NumPy](https://numpy.org/) and [Pandas](https://pandas.pydata.org/) which were used to handle the data and data frames essential to the development of this project.
+* [Matplotlib](https://matplotlib.org/) and [Seaborn](https://seaborn.pydata.org/) which were used for data visualization.
+* [Feature-engine](https://feature-engine.trainindata.com/en/latest/) which was used for feature engineering and selection.
+* [ppscore](https://pypi.org/project/ppscore/) which was used for Predictive Power Score analysis
+* [SciPy](https://docs.scipy.org/doc/scipy/reference/stats.html) which was used for feature engineering, specifically its statistical functions.
+* [scikit-learn](https://scikit-learn.org/stable/) which was used (GridSearchCV specifically) for hyperparameters research and optimization.
 ---
 &nbsp;
 
 
 # Credits 
-
-<!--- * In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. --->
 The Churnometer walkthrough project - Code Institute learning materials: the majority of the code used was taken from the course material and adapted by me to fit the current project needs.
+[Kaggle](https://www.kaggle.com/datasets/codeinstitute/housing-prices-data) where Code Institute has shared the data set used in this project.
 &nbsp;
 
 
 ## Content
 ### Documentation Used:
-
 - [ArbitraryNumberImputer in Feature Engine documentation](https://feature-engine.trainindata.com/en/1.0.x/imputation/ArbitraryNumberImputer.html?highlight=ArbitraryNumberImputer)
 - [CategoricalImputer in Feature Engine documentation](https://feature-engine.trainindata.com/en/1.0.x/imputation/CategoricalImputer.html)
 - [MeanMedianImputer in Feature Engine documentation](https://feature-engine.trainindata.com/en/1.0.x/imputation/MeanMedianImputer.html?highlight=MeanMedianImputer)
@@ -248,18 +246,9 @@ The Churnometer walkthrough project - Code Institute learning materials: the maj
 - [How to use st.write and magic commands](https://www.youtube.com/watch?v=wpDuY9I2fDg)
 
 
-<!---
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
---->
-
 ## Media
 
-- The photos used on the home and sign-up page are from This Open Source site
-- The images used for the gallery page were taken from this other open-source site
 ---
 &nbsp;
 
 # Acknowledgements
-* In case you would like to thank the people that provided support through this project.
