@@ -291,3 +291,4 @@ The Churnometer walkthrough project - Code Institute learning materials: the maj
 - [Markdown guide](https://www.markdownguide.org/)
 - [Hyperparameter Optimization tutorial - Youtube](https://www.youtube.com/watch?v=eZ98q7iOUAA)
 - [How to use st.write and magic commands](https://www.youtube.com/watch?v=wpDuY9I2fDg)
+- [How to Use Streamlit’s st.write Function to Improve Your Streamlit Dashboard](https://towardsdatascience.com/how-to-use-streamlits-st-write-function-to-improve-your-streamlit-dashboard-1586333eb24d)

@@ -20,18 +20,22 @@ def predict_house_prices_body():
 
     st.subheader("Business Requirement 2:")
     st.write(
-        f"The client is interested in predicting the house sale price "
-        f"from her four inherited houses and any other house in Ames, Iowa."
+        """
+        The client is interested in predicting the house sale price 
+        from her four inherited houses and any other house in Ames, Iowa.
+        """
     )
     st.write(
-        f"Based on this request this application will predict the price for the four houses "
-        f"belonging to the client and give the ability to calculate the price of any "
-        f"house in the area of Ames, Iowa as long as the user is in possessions of the data "
-        f"reguarding the 3 features need for the model to predict. \n"
-        f"These being: \n "
-        f"* 'OverallQual' - Rates the overall material and finish of the house \n "
-        f"* 'GrLivArea' - Above grade (ground) living area square feet \n "
-        f"* 'TotalBsmtSF' - Total square feet of basement area"
+        """
+        Based on this request this application will predict the price for the four houses 
+        belonging to the client and give the ability to calculate the price of any 
+        house in the area of Ames, Iowa as long as the user is in possessions of the data 
+        reguarding the 3 features need for the model to predict. \n
+        These being: \n
+        * 'OverallQual' - Rates the overall material and finish of the house \n
+        * 'GrLivArea' - Above grade (ground) living area square feet \n
+        * 'TotalBsmtSF' - Total square feet of basement area
+        """
     )
 
     st.write("---")
@@ -45,22 +49,29 @@ def predict_house_prices_body():
     # display data from client's houses
     if st.checkbox("Click to display the Client's houses details"):
         st.write(
-            f"The data set has {client_houses.shape[0]} rows and {client_houses.shape[1]} columns. \n"
-            f"The details about each feature of the houses are displayed in this data frame."
+            f"The data set has {client_houses.shape[0]} rows and {client_houses.shape[1]} columns."
+            "The details about each feature of the houses are displayed in this data frame."
         )
 
         st.write(client_houses.head(4))
-    
-    property_1 = predict_price(client_houses.iloc[[0]], price_features, price_pipeline)
-    property_2 = predict_price(client_houses.iloc[[1]], price_features, price_pipeline)
-    property_3 = predict_price(client_houses.iloc[[2]], price_features, price_pipeline)
-    property_4 = predict_price(client_houses.iloc[[3]], price_features, price_pipeline)
 
-    st.write(f"Client's property 1 has a predicted house price of **${property_1}**.")
-    st.write(f"Client's property 2 has a predicted house price of **${property_2}**.")
-    st.write(f"Client's property 3 has a predicted house price of **${property_3}**.")
-    st.write(f"Client's property 4 has a predicted house price of **${property_4}**.")
+    property_1 = predict_price(
+        client_houses.iloc[[0]], price_features, price_pipeline)
+    property_2 = predict_price(
+        client_houses.iloc[[1]], price_features, price_pipeline)
+    property_3 = predict_price(
+        client_houses.iloc[[2]], price_features, price_pipeline)
+    property_4 = predict_price(
+        client_houses.iloc[[3]], price_features, price_pipeline)
 
+    st.write(
+        f"Client's property 1 has a predicted house price of **${property_1}**.")
+    st.write(
+        f"Client's property 2 has a predicted house price of **${property_2}**.")
+    st.write(
+        f"Client's property 3 has a predicted house price of **${property_3}**.")
+    st.write(
+        f"Client's property 4 has a predicted house price of **${property_4}**.")
 
     st.write("---")
 

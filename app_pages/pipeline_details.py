@@ -25,32 +25,27 @@ def page_predict_price_body():
     st.write("### ML Pipeline: Predict House Prices")
     # display pipeline training summary conclusions
     st.write(
-        f"After evaluating different potential algorithms for this model, the choice fell on "
-        f"AdaBoostRegressor since the R2 score was excellent and above our initial target of "
-        f"0.7 on train and test sets, agreed with the client."
+        """
+        After evaluating different potential algorithms for this model, the choice fell on 
+        AdaBoostRegressor since the R2 score was excellent and above our initial target of 
+        0.7 on train and test sets, agreed with the client.
+        """
     )
     st.write(
-        f"After an extensive hyperparameters research to find the best configuration, the score is: \n"
+        "After an extensive hyperparameters research to find the best configuration, "
+        "the score is:"
     )
-
-    st.success(
-        f"Train set \n"
-        f"R2 Score: 0.827 \n"
-    )
-
-    st.success(
-        f"Test set \n"
-        f"R2 Score: 0.813 \n"
-    )
-    st.write(
-        f"This is an excellent result, exceeding the agreed expectations. "
-    )
+    st.success("Train set R2 Score: 0.827")
+    st.success("Test set R2 Score: 0.813")
+    st.write("This is an excellent result, exceeding the agreed expectations.")
     st.write("---")
 
     # show pipeline steps
     st.write(
-        "* ML pipeline with feature engineering and best hyperparameters configuration "
-        "optimized and refitted with the 3 most important features."
+        """
+        * ML pipeline with feature engineering and best hyperparameters configuration 
+        optimized and refitted with the 3 most important features.
+        """
     )
     st.code(price_pipe)
     st.write("---")
@@ -64,5 +59,5 @@ def page_predict_price_body():
     # evaluate performance on both sets
     st.write("### Pipeline Performance")
     model_performance(X_train=X_train, y_train=y_train,
-                    X_test=X_test, y_test=y_test,
-                    pipeline=price_pipe)
+                      X_test=X_test, y_test=y_test,
+                      pipeline=price_pipe)

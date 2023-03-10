@@ -30,8 +30,11 @@ def house_price_study_body():
 
     st.header("House price study")
     st.write(
-        f"The client is interested in discovering how house attributes correlate with sale prices. "
-        f"Therefore, the client expects data visualizations of the correlated variables against the sale price."
+        """
+        The client is interested in discovering how house attributes correlate with sale prices. 
+        Therefore, the client expects data visualizations of the correlated variables against 
+        the sale price.
+        """
     )
 
     # inspect data
@@ -46,19 +49,27 @@ def house_price_study_body():
 
     # Correlation Study Summary
     st.write(
-        f"* A correlation study was conducted in the notebook to better understand how "
-        f"the variables are correlated to the houses sale price. \n"
-        f"The most correlated variable are: **{vars_to_study}**"
+        """
+        * A correlation study was conducted in the notebook to better understand how 
+        the variables are correlated to the houses sale price. \n
+        The most correlated variable are: \n
+        """
+        f"**{vars_to_study}**"
     )
 
     st.info(
-        f"The correlation indications and plots below interpretation converge. "
-        f"It is indicated that: \n"
-        f"* Houses that are **larger in area** on various feature are also higher in value. "
-        f"This seems to be the strongest correlation at the moment, which was not one of the initial hypothesis. \n"
-        f"* Houses that are in **better condition** and with **higher quality** building features are higher in value, "
-        f"confirming hypothesis 1. \n"
-        f"* Houses which are **newer or more recently renovated** are higher in value, confirming hypothesis 2. \n"
+        """
+        The correlation indications and plots below interpretation converge. \n
+        It is indicated that: \n
+        * Houses that are **larger in area** on various feature are also higher in value. 
+        This seemed to be the strongest correlation in the initial part of the analysis, 
+        which was not one of the initial hypothesis. Further assessment has still confirmed 
+        overall quality as the most important feature, in a later stage when evaluating the model
+        and assessing feature importance. \n
+        * Houses that are in **better condition** and with **higher quality** building features are higher in value, 
+        confirming hypothesis 1. \n
+        * Houses which are **newer or more recently renovated** are higher in value, confirming hypothesis 2. \n
+        """
     )
 
     # load data frame
