@@ -27,6 +27,6 @@ def page_project_hypothesis_body():
 
     st.subheader("Unexpected results:")
     st.info(
-        f"Houses that are larger in area on various feature are also higher in value. This seems to be "
-        f"the strongest correlation, which was not one of my initial hypothesis."
+        f"Houses that are larger in area on various feature are also higher in value. There seems to be "
+        f"a very stong correlation, which was not one of my initial hypothesis."
     )

@@ -55,8 +55,13 @@ Although your friend has an excellent understanding of property prices in her ow
 ## **Hypothesis and how to validate?**
 * 1 - I suspect the Overall condition of the house and overall material and finish of the house will impact the sale price significantly.
     * A Correlation study can help in this investigation.
+    * Correct: The correlation study supports this.
 * 2 - I suspect the remodel date of the house will be significant in positively impact the price of sale of the house.
     * A Correlation study can help in this investigation.
+    * Correct: The correlation study supports this.
+* Unexpected results:
+    * Houses that are larger in area on various feature are also higher in value. There seems to be a very strong correlation, which was not one of my initial hypothesis.
+    * The model will be built around the most important features recognised in the analysis and these will be amongst the most relevant ones.
 ---
 &nbsp;
 
