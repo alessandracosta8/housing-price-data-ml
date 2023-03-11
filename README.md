@@ -5,6 +5,36 @@ Heritage Housing Issues is a project developed to predict the sale price of hous
 ---
 &nbsp;
 
+## **Table of Content**
+- [Dataset Content](#dataset-content)
+- [Business Requirements](#business-requirements)
+- [Hypothesis and how to validate?](#hypothesis-and-how-to-validate)
+- [The rationale to map the business requirements to the Data Visualisations and ML tasks](#the-rationale-to-map-the-business-requirements-to-the-data-visualisations-and-ml-tasks)
+- [ML Business Case](#ml-business-case)
+- [User Stories](#user-stories)
+    - [Epic: Data Access](#epic-data-access)
+    - [Epic: Model results](#epic-model-results)
+    - [Epic: Analysis Details](#epic-analysis-details)
+- [Data Preparation](#data-preparation)
+    - [Data Cleaning](#data-cleaning)
+    - [Feature Engineering](#feature-engineering)
+        - [1. Categorical Encoding](#1-categorical-encoding)
+        - [2. Numerical Transformations](#2-numerical-transformations)
+        - [3. Smart Correlated Selection](#3-smart-correlated-selection)
+- [Dashboard Design](#dashboard-design)
+    - [Page 1: Quick project summary](#page-1-quick-project-summary)
+    - [Page 2: House prices Study of the Ames, Iowa area](#page-2-house-prices-study-of-the-ames-iowa-area)
+    - [Page 3: House prices predictor](#page-3-house-prices-predictor)
+    - [Page 4: Hypothesises](#page-4-hypothesises)
+    - [Page 5: Predict Price](#page-5-predict-price)
+- [Unfixed Bugs](#unfixed-bugs)
+- [Deployment](#deployment)
+- [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
+- [Credits](#credits)
+- [Content](#content)
+---
+&nbsp;
+
 
 ## **Dataset Content**
 * The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/housing-prices-data). We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace. 
